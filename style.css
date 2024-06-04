@@ -1,0 +1,149 @@
+/*------------------------------------------------------------
+# General
+-------------------------------------------------------------*/
+body {
+    position: relative;
+    margin:  auto;
+}
+/*------------------------------------------------------------
+# Header
+-------------------------------------------------------------*/
+header  {
+    position: relative;
+    background: url('images/pexels-pixabay-159872.jpg') no-repeat fixed;
+    background-size: cover;
+    height: 1000px;
+}
+header img {
+    position: absolute;
+    top: 0;
+    left: 37%;
+    width: 300px;
+}
+header h1 {
+    position: absolute;
+    top: 200px;
+    left: 30%;
+    font-size: 3em;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: white;
+}
+header p {
+    position: absolute;
+    top: 300px;
+    left: 33%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+/*------------------------------------------------------------
+# Main
+-------------------------------------------------------------*/
+main {
+    position: absolute;
+    top: 400px;
+    left: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px 120px 120px;
+    gap: 20px;
+    width: 700px;
+    background-color: white;
+    opacity: 0.8;
+    padding: 20px;
+    border-radius: 15px;
+}
+main #mes_livres {
+    position: relative;
+    background-color: rgb(59, 19, 19);
+    grid-column: 1 / 2;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+main #favoris {
+    position: relative;
+    background-color: rgb(59, 19, 19);
+    grid-column: 2 / 4;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+main #inventaire {
+    position: relative;
+    background-color: rgb(39, 39, 1);
+    grid-column: 1 / 4;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+main #ajout {
+    position: relative;
+    background-color: rgb(39, 39, 1);
+    grid-column: 1 / 4;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+main a {
+    color: white;
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+main #book a {
+    position: absolute;
+    left: 120px;
+    bottom: 20px;
+}
+main #favori_book a {
+    position: absolute;
+    left: 120px;
+    bottom: 20px;
+}
+main #book_inventory a {
+    position: absolute;
+    left: 30%;
+    bottom: 20px;
+}
+main #book_input a {
+    position: absolute;
+    left: 35%;
+    bottom: 20px;
+}
+main i {
+    color: white;
+    font-size: 2em;
+}
+main #book-icone a i {
+    position: absolute;
+    left: 150px;
+    bottom: 60px;
+}
+main #star-icone a i {
+    position: absolute;
+    left: 150px;
+    bottom: 60px;
+}
+main #clipboard-icone a i {
+    position: absolute;
+    left: 48%;
+    bottom: 60px;
+}
+main #circleplus-icone a i {
+    position: absolute;
+    left: 48%;
+    bottom: 60px;
+}
+/*------------------------------------------------------------
+# Footer
+-------------------------------------------------------------*/
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+}
+footer p {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 1.2em;
+    margin-top: 50px;
+}
