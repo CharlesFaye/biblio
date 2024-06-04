@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0", name="viewport">
+
+         <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <!-- stylesheet file -->
+        <link rel="stylesheet" href="style/favori.css">
+
+        <!-- fontawesome icones kit -->
+        <script src="https://kit.fontawesome.com/a3a05e0c21.js" crossorigin="anonymous"></script>
+
+        <!-- JS file -->
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <!-- ======= Header ======= -->
+        <header>
+            <div id="title1">
+                <h1>Application de gestion de livres</h1>
+            </div>
+            <div id="entete">
+                <!-- ======= Nav menu ======= -->
+                 <nav id="menu">
+                    <a href="index.html"><i class="fa-solid fa-angle-left"></i></a>
+                    <a href="index.html">Back</a>
+                </nav><!-- ======= End Nav menu ======= -->
+        
+                <div id="title2">
+                    <h2>Mes favoris</h2>
+                </div>
+            </div>
+        </header><!-- ======= End Header ======= -->
+
+        <!-- ======= Main ======= -->
+        <main>
+            <!-- ======= Section ======= -->
+           <section>
+                <form action="#" id="itemForm">
+                    <input type="text" name="newBook" id="itemInput" placeholder="Ajouter un livre à la liste de mes favoris...">
+                    <button id="add">Ajouter</button>
+                </form>
+                <ul id="itemList">
+                    <li><i class="fa-solid fa-tags"></i><span class="book_title">Comment se faire des amis</span><i class="fa-solid fa-star first-star"></i><i class="fa-solid fa-star second-star"></i><i class="fa-solid fa-star third-star"></i><i class="fa-solid fa-star fourth-star"></i><i class="fa-solid fa-star-half-stroke fifth-star"></i><i class="fa-solid fa-trash-can"></i></li>
+                    <li><i class="fa-solid fa-tags"></i><span class="book_title">Père riche, père pauvre</span><i class="fa-solid fa-star first-star"></i><i class="fa-solid fa-star second-star"></i><i class="fa-solid fa-star third-star"></i><i class="fa-solid fa-star fourth-star"></i><i class="fa-solid fa-star-half-stroke fifth-star"></i><i class="fa-solid fa-trash-can"></i></li>
+                    <li><i class="fa-solid fa-tags"></i><span class="book_title">Une si longue lettre</span><i class="fa-solid fa-star first-star"></i><i class="fa-solid fa-star second-star"></i><i class="fa-solid fa-star third-star "></i><i class="fa-solid fa-star fourth-star"></i><i class="fa-solid fa-star-half-stroke fifth-star"></i><i class="fa-solid fa-trash-can"></i></li>
+                    <li><i class="fa-solid fa-tags"></i><span class="book_title">Les contes d'Amadou Koumba</span><i class="fa-solid fa-star first-star"></i><i class="fa-solid fa-star second-star"></i><i class="fa-solid fa-star third-star"></i><i class="fa-solid fa-star fourth-star"></i><i class="fa-solid fa-star-half-stroke fifth-star"></i><i class="fa-solid fa-trash-can"></i></li>
+                    <li><i class="fa-solid fa-tags"></i><span class="book_title">Sous l'Orage</span><i class="fa-solid fa-star first-star"></i><i class="fa-solid fa-star second-star"></i><i class="fa-solid fa-star third-star"></i><i class="fa-solid fa-star fourth-star"></i><i class="fa-regular fa-star fifth-star"></i><i class="fa-solid fa-trash-can"></i></li>
+                    <li><i class="fa-solid fa-tags"></i><span class="book_title">Amkoullel l'enfant peul</span><i class="fa-solid fa-star first-star"></i><i class="fa-solid fa-star second-star"></i><i class="fa-solid fa-star third-star"></i><i class="fa-solid fa-star fourth-star"></i><i class="fa-regular fa-star fifth-star"></i><i class="fa-solid fa-trash-can"></i></li>
+                    
+                </ul>
+           </section><!-- ======= End Section ======= -->
+           <!-- ======= Aside ======= -->
+           <aside>
+            <h2>Les livres disponibles</h2>
+            <li id="dale_book">Comment se faire des amis</li>
+            <li id="kiyosaki_book">Père riche, père pauvre</li>
+            <li id="mariama_ba_book">Une si longue lettre</li>
+            <li id="birago_book1">Les contes d'Amadou Koumba</li>
+            <li id="birago_book2">Les nouveaux contes d'Amadou Koumba</li>
+            <li id="birago_book3">Leurres et Lueurs</li>
+            <li id="hampate_book">Amkoullel l'enfant peul</li>
+            <li id="coetla_book">Contes et Lavanes</li>
+            <li id="mbougar_book">La Plus Secrète Mémoire des hommes</li>
+            <li id="diop_book">Nations nègres et culture</li>
+            <li id="robbins_book">Les onze lois de la réussite</li>
+           </aside><!-- ======= End Aside ======= -->
+              
+                
+        </main><!-- ======= End Main ======= -->
+
+        <!-- ======= Footer ======= -->
+        <footer>
+            <p>Développé par @Charles S. Faye - Mai 2024</p>
+        </footer><!-- ======= End Footer ======= -->
+
+    </body>
+</html>
