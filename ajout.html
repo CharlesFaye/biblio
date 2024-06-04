@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0", name="viewport">
+
+         <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <!-- stylesheet file -->
+        <link rel="stylesheet" href="style/ajout.css">
+
+        <!-- fontawesome icones kit -->
+        <script src="https://kit.fontawesome.com/a3a05e0c21.js" crossorigin="anonymous"></script>
+
+
+    </head>
+    <body>
+        <!-- ======= Header ======= -->
+        <header>
+            <div id="title1">
+                <h1>Application de gestion de livres</h1>
+            </div>
+            <div id="entete">
+                <!-- ======= Nav menu ======= -->
+                 <nav id="menu">
+                    <a href="index.html"><i class="fa-solid fa-angle-left"></i></a>
+                    <a href="index.html">Back</a>
+                </nav><!-- ======= End Nav menu ======= -->
+        
+                <div id="title2">
+                    <h2>Nouvelle entrée de livre</h2>
+                </div>
+            </div>
+        </header><!-- ======= End Header ======= -->
+
+        <!-- ======= Main ======= -->
+        <main>
+            <h2>Formulaire d'entrée de livre</h2>
+            <!-- ======= Book_Properties section ======= -->
+            <section id="Book_Properties">
+                <div id="Book_title">
+                    <input type="text" name="titre" id="titre">
+                    <label for="titre">Titre du livre</label>
+                </div>
+
+                <div id="Release_place">
+                    <input type="text" name="lieu" id="lieu">
+                    <label for="lieu">Lieu de publication</label>
+                </div>
+
+            </section><!-- ======= End Book_Properties section ======= -->
+
+            <!-- ======= Book_Author section ======= -->
+            <section id="Book_Author">
+                <h3>Auteur</h3>
+                <div id="Initials">
+                    <div id="Firstname">
+                        <input type="text" name="firstname" id="firstname">
+                        <label for="firstname">Prénom</label>
+                    </div>
+
+                    <div id="FamilyName">
+                        <input type="text" name="name" id="name">
+                        <label for="name">Nom de famille</label>
+                    </div>
+                </div>
+            </section><!-- ======= End Book_Author section ======= -->
+
+            <!-- ======= Book_Properties2 section ======= -->
+            <section id="Book_Properties2">
+                <div id="NumberOfPages">
+                    <input type="text" name="page" id="page" placeholder="ex:23">
+                    <label for="page"># nombre de pages</label>
+                </div>
+
+                <div id="NumberOfCopies">
+                    <input type="text" name="copy" id="copy" placeholder="ex:23">
+                    <label for="copy"># nombre de copies</label>
+                </div>
+            </section><!-- ======= End Book_Properties2 section ======= -->
+
+            <!-- ======= section Book_Editor ======= -->
+            <section id="Book_Editor">
+                <h3>Édité par :</h3>
+                <div id="AllAboutEditors">
+                    <div id="Editor">
+                        <input type="text" name="editeur" id="editeur">
+                        <label for="editeur">Nom de la maison d'édition</label>
+                    </div>
+
+                    <div id="Address">
+                        <input type="text" name="address" id="address">
+                        <label for="address">Adresse</label>
+                    </div>
+                </div>
+            </section><!-- ======= End section Book_Editor ======= -->
+
+            <!-- ======= section Book_Properties3 ======= -->
+            <section id="Book_Properties3">
+                <div id="ClassifyingNumber">
+                    <input type="text" name="classification" id="classification" placeholder="ex:23">
+                    <label for="classification">Numéro de classification</label>
+                </div>
+
+                <div id="GetterNumber">
+                    <input type="text" name="get" id="get" placeholder="ex:23">
+                    <label for="get">Numéro d'accession</label>
+                </div>
+            </section><!-- ======= End section Book_Properties3 ======= -->
+
+            <!-- ======= section Use_conditions ======= -->
+            <section id="Use_conditions">
+                <input type="text" name="use" id="use">
+                <label for="use">Conditions d'usage</label>
+            </section><!-- ======= End section Use_conditions ======= -->
+
+            <!-- ======= section Additionnal_Comments ======= -->
+            <section id="Additionnal_Comments">
+                <label for="comments">Commentaires additionnels</label>
+                <textarea name="comments" id="comments">Écrivez ici...</textarea>
+            </section><!-- ======= End section Additionnal_Comments ======= -->
+              
+              
+            <!-- ======= section buttons ======= -->
+            <section id="buttons">
+                <button id="save">Sauvegarder</button>
+                <button  id="submit">Soumettre</button>
+            </section><!-- ======= End section buttons ======= -->
+           
+                   
+        </main><!-- ======= End Main ======= -->
+
+        <!-- ======= Footer ======= -->
+        <footer>
+            <p>Développé par @Charles S. Faye - Mai 2024</p>
+        </footer><!-- ======= End Footer ======= -->
+
+    </body>
+</html>
