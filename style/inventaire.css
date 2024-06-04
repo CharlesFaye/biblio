@@ -1,0 +1,259 @@
+/*------------------------------------------------------------
+# General
+-------------------------------------------------------------*/
+body {
+    position: relative;
+    background-color: rgb(208, 218, 223);
+}
+/*------------------------------------------------------------
+# Header
+-------------------------------------------------------------*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    margin: -8px;
+}
+#entete {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);   
+}
+#title1 {
+    padding-left: 25px;
+}
+#menu {
+     padding: 20px;
+     margin-left: 10px;
+}
+#menu a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: black;
+}
+#menu:hover {
+    background-color: rgb(208, 218, 223);
+    border-radius: 10px;
+}
+header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    font-weight: normal;
+    padding: 10px;
+    margin-right: 100px;
+}
+/*------------------------------------------------------------
+# Main
+-------------------------------------------------------------*/
+main {
+    margin: auto;
+    width: 900px;
+    background-color: white;
+    border-radius: 10px;
+}
+main h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    padding: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+/*------------------------------------------------------------
+# Main section Book Info 
+-------------------------------------------------------------*/
+main #title {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin: 50px 0px 50px 50px;
+}
+#title input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#title label {
+    font-size: 1.1em;
+    font-family: "Montserrat", sans-serif;
+}
+main #author {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin: 50px 0px 50px 50px;
+}
+#author input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#author label {
+    font-size: 1.1em;
+    font-family: "Montserrat", sans-serif;
+}
+main #editor {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin: 50px 0px 50px 50px;
+}
+#editor input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#editor label {
+    font-size: 1.1em;
+    font-family: "Montserrat", sans-serif;
+}
+main #edition {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin: 50px 0px 0px 50px;
+}
+#edition input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#edition label {
+    font-size: 1.1em;
+    font-family: "Montserrat", sans-serif;
+}
+main h3 {
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 50px;
+    font-weight: normal;
+}
+/*------------------------------------------------------------
+# Main section CoverType
+-------------------------------------------------------------*/
+main #CoverType {
+    margin-top: 50px;
+}
+main #Cover {
+    display: flex;
+    justify-content: flex-start;
+    gap: 310px;
+    align-items: flex-end;
+    margin: 25px 0 0 60px;
+}
+#Cover input {
+    transform: scale(1.5);
+    margin-right: 15px;
+    cursor: pointer;
+}
+#Cover label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+/*------------------------------------------------------------
+# Main section Categorie
+-------------------------------------------------------------*/
+main #Categorie {
+    margin-top: 50px;
+}
+#inner_categorie_div {
+    display: flex;
+    gap: 200px;
+    margin-left: 50px;
+}
+#inner_categorie_div input {
+    transform: scale(1.5);
+    margin: 15px;
+    cursor: pointer;
+}
+#inner_categorie_div label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+/*------------------------------------------------------------
+# Main section Available
+-------------------------------------------------------------*/
+main #Available {
+    margin-top: 50px;
+}
+main #Disponible {
+    display: flex;
+    justify-content: flex-start;
+    gap: 310px;
+    align-items: flex-end;
+    margin: 25px 0 0 60px;
+}
+#Disponible input {
+    transform: scale(1.5);
+    margin-right: 15px;
+    cursor: pointer;
+}
+#Disponible label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+/*------------------------------------------------------------
+# Main section Unity_Price
+-------------------------------------------------------------*/
+#Unity_Price h3 {
+    margin-top: 50px;
+}
+#Unity_Price input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+/*------------------------------------------------------------
+# Main Buttons
+-------------------------------------------------------------*/
+#buttons {
+    margin-top: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+#save {
+    padding: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 50px 0 50px 350px;
+    cursor: pointer; 
+}
+#submit {
+    padding: 15px;
+    margin: 50px 10px 50px 0px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    color: white;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/*------------------------------------------------------------
+# Footer
+-------------------------------------------------------------*/
+footer p {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}

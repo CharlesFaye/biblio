@@ -1,0 +1,161 @@
+/*------------------------------------------------------------
+# General
+-------------------------------------------------------------*/
+body {
+    position: relative;
+    background-color: rgb(208, 218, 223);
+}
+/*------------------------------------------------------------
+# Header
+-------------------------------------------------------------*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    margin: -8px;
+}
+#entete {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);   
+}
+#title1 {
+    padding-left: 25px;
+}
+#menu {
+     padding: 20px;
+     margin-left: 10px;
+}
+#menu a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: black;
+}
+#menu:hover {
+    background-color: rgb(208, 218, 223);
+    border-radius: 10px;
+}
+header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    font-weight: normal;
+    padding: 10px;
+    margin-right: 100px;
+}
+/*------------------------------------------------------------
+# Main
+-------------------------------------------------------------*/
+main {
+    display: flex;
+    justify-content: space-between;
+}
+/*------------------------------------------------------------
+# Section
+-------------------------------------------------------------*/
+section {
+    margin: 100px 100px 0px 50px;
+    flex: 3;
+}
+section input {
+    padding: 10px;
+    margin-left: 45px;
+    border-radius: 5px;
+    width: 45%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+section button {
+    padding: 10px;
+    margin-left: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: rgb(148, 197, 69);
+    cursor: pointer;
+}
+section li {
+    position: relative;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+/*------------------------------------------------------------
+# Icons
+-------------------------------------------------------------*/
+.fa-trash-can {
+    position: absolute;
+    right: 90px;
+    color: red;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+.first-star {
+    position: absolute;
+    left: 500px;
+    color: rgba(140, 163, 12, 0.822);
+}
+.second-star {
+    position: absolute;
+    left: 520px;
+    color: rgba(140, 163, 12, 0.822);
+}
+.third-star {
+    position: absolute;
+    left: 540px;
+    color: rgba(140, 163, 12, 0.822);
+}
+.fourth-star {
+    position: absolute;
+    left: 560px;
+    color: rgba(140, 163, 12, 0.822);
+}
+.fifth-star {
+    position: absolute;
+    left: 580px;
+    color: rgba(140, 163, 12, 0.822);
+}
+/*------------------------------------------------------------
+# Aside 
+-------------------------------------------------------------*/
+aside {
+    margin-top: 50px;
+    flex: 1.5;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: rgb(20, 20, 51);
+    height: 500px;
+    overflow-x: none;
+    overflow-y: scroll;
+}
+aside h2 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+aside li {
+    padding: 15px;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*------------------------------------------------------------
+# Footer
+-------------------------------------------------------------*/
+footer p {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}

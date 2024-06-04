@@ -1,0 +1,153 @@
+/*------------------------------------------------------------
+# General
+-------------------------------------------------------------*/
+body {
+    position: relative;
+    background-color: rgb(208, 218, 223);
+}
+/*------------------------------------------------------------
+# Header
+-------------------------------------------------------------*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    margin: -8px;
+}
+#entete {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);   
+}
+#title1 {
+    padding-left: 25px;
+}
+#menu {
+     padding: 20px;
+     margin-left: 10px;
+}
+#menu a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: black;
+}
+#menu:hover {
+    background-color: rgb(208, 218, 223);
+    border-radius: 10px;
+}
+header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    font-weight: normal;
+    padding: 10px;
+    margin-right: 100px;
+}
+/*------------------------------------------------------------
+# Main
+-------------------------------------------------------------*/
+main section{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 1200px;
+}
+main p {
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+}
+/*------------------------------------------------------------
+# Main legend Part
+-------------------------------------------------------------*/
+main #legend {
+   order: 2;
+   margin: -100px -50px 0px 50px;
+   flex: 1;
+}
+main #legend h3 {
+    font-family: "Montserrat", sans-serif;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+/*------------------------------------------------------------
+# Main table part
+-------------------------------------------------------------*/
+main #table {
+   order: 1;
+   flex: 6;
+}
+main #filter {
+    margin: 50px 0px 50px 75px;
+}
+section table td {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    padding: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+section table th {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+section .upper {
+    text-transform: uppercase;
+}
+/*------------------------------------------------------------
+# Main Filter
+-------------------------------------------------------------*/
+#filter span {
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.active {
+    border: 2px solid black;
+}
+#filter span:hover {
+    color: white;
+    background-color: rgb(24, 24, 114);
+    border: none;
+}
+/*------------------------------------------------------------
+# Icons
+-------------------------------------------------------------*/
+.fa-check-double {
+    color: green;
+}
+.fa-xmark {
+    color: red;
+}
+.fa-spinner {
+    color: rgb(216, 103, 11);
+}
+.reveal, .moins {
+    display: none;
+}
+/*------------------------------------------------------------
+# Footer
+-------------------------------------------------------------*/
+footer p {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+/*------------------------------------------------------------
+# Others
+-------------------------------------------------------------*/
+.moins, .show, .fa-angle-down, .fa-angle-up {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    margin-top: 10px;
+    text-decoration: underline;
+    color: rgb(12, 12, 65);
+    cursor: pointer;
+}
+.hide-loading, .hide-no-read, .hide-read {
+    display: none !important;
+}

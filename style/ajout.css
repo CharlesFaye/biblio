@@ -1,0 +1,368 @@
+/*------------------------------------------------------------
+# General
+-------------------------------------------------------------*/
+body {
+    position: relative;
+    background-color: rgb(208, 218, 223);
+}
+/*------------------------------------------------------------
+# Header
+-------------------------------------------------------------*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    margin: -8px;
+}
+#entete {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);   
+}
+#title1 {
+    padding-left: 25px;
+}
+#menu {
+     padding: 20px;
+     margin-left: 10px;
+}
+#menu a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: black;
+}
+#menu:hover {
+    background-color: rgb(208, 218, 223);
+    border-radius: 10px;
+}
+header h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    font-weight: normal;
+    padding: 10px;
+    margin-right: 100px;
+}
+/*------------------------------------------------------------
+# Main
+-------------------------------------------------------------*/
+main {
+    margin: auto;
+    width: 900px;
+    background-color: white;
+    border-radius: 10px;
+}
+main h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    padding: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+/*------------------------------------------------------------
+# Main Book_Properties Section
+-------------------------------------------------------------*/
+main #Book_Properties {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+#Book_title {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+#Book_title input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#Book_title label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+#Release_place {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+#Release_place input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#Release_place label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+#Book_Author h3 {
+    margin: 50px 0 20px 115px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+/*------------------------------------------------------------
+# Main Initials Section
+-------------------------------------------------------------*/
+main #Initials {
+    display: flex;
+    justify-content: space-around;
+}
+#Firstname {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#Firstname input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#Firstname label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+#FamilyName {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#FamilyName input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#FamilyName label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+/*------------------------------------------------------------
+# Main Book_Properties2 Section
+-------------------------------------------------------------*/
+main #Book_Properties2 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+#NumberOfPages {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+#NumberOfPages input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#NumberOfPages label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+#NumberOfCopies {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+#NumberOfCopies input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#NumberOfCopies label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+#Book_Editor h3 {
+    margin: 50px 0 20px 115px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+/*------------------------------------------------------------
+# Main AllAboutEditors Section
+-------------------------------------------------------------*/
+main #AllAboutEditors {
+    display: flex;
+    justify-content: space-around;
+}
+#Editor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#Editor input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#Editor label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+#Address {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#Address input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#Address label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+/*------------------------------------------------------------
+# Main Book_Properties3 Section
+-------------------------------------------------------------*/
+main #Book_Properties3 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+#ClassifyingNumber {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+#ClassifyingNumber input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#ClassifyingNumber label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+#GetterNumber {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+#GetterNumber input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#GetterNumber label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+/*------------------------------------------------------------
+# Main Use_conditions Section
+-------------------------------------------------------------*/
+#Use_conditions {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+    margin: 50px 0 50px 110px;
+}
+#Use_conditions input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 37%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#Use_conditions label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+/*------------------------------------------------------------
+# Main Additionnal_Comments Section
+-------------------------------------------------------------*/
+#Additionnal_Comments {
+    display:  flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 50px 0 50px 110px;
+}
+#Additionnal_Comments textarea {
+    padding: 25px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    width: 37%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#Additionnal_Comments label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+/*------------------------------------------------------------
+# Main Buttons
+-------------------------------------------------------------*/
+#buttons {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+#save {
+    margin: 50px 5px 50px 300px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+#submit {
+    margin: 50px 0 50px 0;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+/*------------------------------------------------------------
+# Footer
+-------------------------------------------------------------*/
+footer p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
