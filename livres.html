@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0", name="viewport">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <!-- stylesheet file -->
+        <link rel="stylesheet" href="style/livre.css">
+
+        <!-- fontawesome icones kit -->
+        <script src="https://kit.fontawesome.com/a3a05e0c21.js" crossorigin="anonymous"></script>
+
+        <!-- JS file -->
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!-- ======= Header ======= -->
+        <header>
+            <div id="title1">
+                <h1>Application de gestion de livres</h1>
+            </div>
+            <div id="entete">
+                <!-- ======= Nav menu ======= -->
+                 <nav id="menu">
+                    <a href="index.html"><i class="fa-solid fa-angle-left"></i></a>
+                    <a href="index.html">Back</a>
+                </nav><!-- ======= End Nav menu ======= -->
+        
+                <div id="title2">
+                    <h2>Mes livres</h2>
+                </div>
+            </div>
+        </header><!-- ======= End Header ======= -->
+
+        <!-- ======= Main ======= -->
+        <main>
+            <!-- ======= Filter section ======= -->
+            <div id="filter">
+                <span class="active" data-filter="all">Tous</span>
+                <span data-filter="read">Déjà Lu</span>
+                <span data-filter="load">En cours</span>
+                <span data-filter="unread">Non Lu</span>
+            </div><!-- ======= End filter section======= -->
+            <!-- ======= Section ======= -->
+            <section>
+            <div id="legend">
+                <h3>Légendes</h3>
+                <p><i class="fa-solid fa-check-double"></i> : Déjà Lu</p>
+                <p><i class="fa-solid fa-xmark"></i> : Non lu</p>
+                <p><i class="fa-solid fa-spinner"></i> : En cours</p> 
+            </div>
+            
+            <div id="table">
+                <!-- ======= Table ======= -->
+            <table>
+                <!-- ======= Thead ======= -->
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>Date de Parution</th>
+                        <th>Statut</th>
+                    </tr>
+                </thead><!-- ======= End Thead ======= -->
+
+                <!-- ======= Tbody ======= -->
+                <tbody>
+                    <tr class="loading">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>Comment se faire des amis</td>
+                        <td>Dale Carnegie</td>
+                        <td>1936</td>
+                        <td><i class="fa-solid fa-spinner"></i></i></td>
+                    </tr>
+
+                    <tr class="loading">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>Père riche, père pauvre</td>
+                        <td>Robert Kiyosaki</td>
+                        <td>1997</td>
+                        <td><i class="fa-solid fa-spinner"></i></i></td>
+                    </tr>
+
+                    <tr class="already_read">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>Une si longue lettre</td>
+                        <td>Mariama Bâ</td>
+                        <td>1979</td>
+                        <td><i class="fa-solid fa-check-double"></i></td>
+                        
+                    </tr>
+
+                    <tr class="still_no_read">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>Les onze lois de la réussite</td>
+                        <td>Anthony Robbins</td>
+                        <td>2011</td>
+                        <td><i class="fa-solid fa-xmark"></i></td>   
+                    </tr>
+
+                    <tr class="already_read">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>Les Contes d'Amadou Koumba</td>
+                        <td>Birago Diop</td>
+                        <td>1947</td>
+                        <td><i class="fa-solid fa-check-double"></i></td>
+                    </tr>
+
+                    <tr class="still_no_read">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>Les nouveaux Contes d'Amadou Koumba</td>
+                        <td>Birago Diop</td>
+                        <td>1958</td>
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                    </tr>
+
+                    <tr class="already_read">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>Sous l'orage</td>
+                        <td>Seydou Badian</td>
+                        <td>1957</td>
+                        <td><i class="fa-solid fa-check-double"></i></td>
+                    </tr>
+
+                    <tr class="still_no_read">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>Leurres et Lueurs</td>
+                        <td>Birago Diop</td>
+                        <td>1967</td>
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                    </tr>
+
+                    <tr class="reveal show_item still_no_read">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>Contes et Lavanes</td>
+                        <td>Birago Diop</td>
+                        <td>1963</td>
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                    </tr>
+
+                    <tr class="reveal show_item still_no_read">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>La Plus Secrète Mémoire des hommes</td>
+                        <td>Mohamed Mbougar Sarr</td>
+                        <td>2021</td>
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                    </tr>
+                    <tr class="reveal show_item still_no_read">
+                        <td class="upper"><i class="fa-solid fa-tags">nations nègres et culture</i></td>
+                        <td>Cheikh Anta Diop</td>
+                        <td>1955</td>
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                    </tr>
+                    <tr class="reveal show_item still_no_read">
+                        <td class="upper"><i class="fa-solid fa-tags"></i>Amkoullel l'enfant peul</td>
+                        <td>Amadou Hampâté Bâ</td>
+                        <td>1991</td>
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                    </tr>
+                    
+
+                </tbody><!-- ======= End Tbody ======= -->
+            </table><!-- ======= End Table ======= -->
+
+            <span class="show">Afficher plus<i class="fa-solid fa-angle-down"></i></span>
+            <span class="moins">Afficher moins<i class="fa-solid fa-angle-up"></i></span>
+
+            </div>
+            </section><!-- ======= End Section ======= -->
+        </main><!-- ======= End Main ======= -->
+
+        <!-- ======= Footer ======= -->
+        <footer>
+            <p>Développé par @Charles S. Faye - Mai 2024</p>
+        </footer><!-- ======= End Footer ======= -->
+
+    </body>
+</html>
