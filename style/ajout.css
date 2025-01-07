@@ -1,9 +1,44 @@
 /*------------------------------------------------------------
+# RESET STYLES
+-------------------------------------------------------------*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*------------------------------------------------------------
+# CSS VARIABLES
+-------------------------------------------------------------*/
+:root {
+    --font-primary : "Roboto", sans-serif;
+    --font-secondary : "Montserrat", sans-serif;
+
+    --fs : clamp(0.8em, 1em, 1.2em);
+
+    --fw : 500;
+
+    --width : 120%;
+
+    --padding-10 : 10px;
+
+    --border : 1px solid #000;
+
+    --border-radius-5 : 5px;
+
+    --cursor-pointer : pointer;
+
+    --gap : 15px;
+
+}
+/*------------------------------------------------------------
 # General
 -------------------------------------------------------------*/
-body {
+html, body {
     position: relative;
     background-color: rgb(208, 218, 223);
+    font-family: var(--font-secondary);
 }
 /*------------------------------------------------------------
 # Header
@@ -12,8 +47,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
-    margin: -8px;
+    background-color: #fff;
+    padding: var(--padding-10);
 }
 #entete {
     display: flex;
@@ -29,34 +64,32 @@ header {
      margin-left: 10px;
 }
 #menu a {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 #menu:hover {
     background-color: rgb(208, 218, 223);
     border-radius: 10px;
 }
 header h2 {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.1em;
     font-weight: normal;
-    padding: 10px;
+    padding: var(--padding-10);
     margin-right: 100px;
 }
 /*------------------------------------------------------------
 # Main
 -------------------------------------------------------------*/
 main {
-    margin: auto;
+    margin: 50px auto;
     width: 900px;
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
 }
 main h2 {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-primary);
     font-size: 1.5em;
     font-weight: normal;
     padding: 25px;
@@ -73,44 +106,39 @@ main #Book_Properties {
 #Book_title {
     display: flex;
     flex-direction: column-reverse;
-    gap: 15px;
+    gap: var(--gap);
 }
 #Book_title input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    width: 120%;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: var(--padding-10);
+    font-size: var(--fs);
+    width: var(--width);
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #Book_title label {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: var(--fw);
 }
 #Release_place {
     display: flex;
     flex-direction: column-reverse;
-    gap: 15px;
+    gap: var(--gap);
 }
 #Release_place input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    width: 120%;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: var(--padding-10);
+    font-size: var(--fs);
+    width: var(--width);
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #Release_place label {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: var(--fw);
 }
 #Book_Author h3 {
     margin: 50px 0 20px 115px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: var(--fw);
 }
 /*------------------------------------------------------------
 # Main Initials Section
@@ -122,36 +150,32 @@ main #Initials {
 #Firstname {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap);
 }
 #Firstname input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    width: 120%;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: var(--padding-10);
+    font-size: var(--fs);
+    width: var(--width);
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #Firstname label {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
 }
 #FamilyName {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap);
 }
 #FamilyName input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    width: 120%;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: var(--padding-10);
+    font-size: var(--fs);
+    width: var(--width);
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #FamilyName label {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
 }
 /*------------------------------------------------------------
 # Main Book_Properties2 Section
@@ -164,44 +188,39 @@ main #Book_Properties2 {
 #NumberOfPages {
     display: flex;
     flex-direction: column-reverse;
-    gap: 15px;
+    gap: var(--gap);
 }
 #NumberOfPages input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    width: 120%;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: var(--padding-10);
+    font-size: var(--fs);
+    width: var(--width);
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #NumberOfPages label {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: var(--fw);
 }
 #NumberOfCopies {
     display: flex;
     flex-direction: column-reverse;
-    gap: 15px;
+    gap: var(--gap);
 }
 #NumberOfCopies input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    width: 120%;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: var(--padding-10);
+    font-size: var(--fs);
+    width: var(--width);
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #NumberOfCopies label {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: var(--fw);
 }
 #Book_Editor h3 {
     margin: 50px 0 20px 115px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: var(--fw);
 }
 /*------------------------------------------------------------
 # Main AllAboutEditors Section
@@ -213,36 +232,32 @@ main #AllAboutEditors {
 #Editor {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap);
 }
 #Editor input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    width: 120%;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: var(--padding-10);
+    font-size: var(--fs);
+    width: var(--width);
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #Editor label {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
 }
 #Address {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap);
 }
 #Address input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    width: 120%;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: var(--padding-10);
+    font-size: var(--fs);
+    width: var(--width);
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #Address label {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
 }
 /*------------------------------------------------------------
 # Main Book_Properties3 Section
@@ -255,38 +270,34 @@ main #Book_Properties3 {
 #ClassifyingNumber {
     display: flex;
     flex-direction: column-reverse;
-    gap: 15px;
+    gap: var(--gap);
 }
 #ClassifyingNumber input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    width: 120%;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: var(--padding-10);
+    font-size: var(--fs);
+    width: var(--width);
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #ClassifyingNumber label {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: var(--fw);
 }
 #GetterNumber {
     display: flex;
     flex-direction: column-reverse;
-    gap: 15px;
+    gap: var(--gap);
 }
 #GetterNumber input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    width: 120%;
-    border: 1px solid black;
-    border-radius: 5px;
+    padding: var(--padding-10);
+    font-size: var(--fs);
+    width: var(--width);
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #GetterNumber label {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: var(--fw);
 }
 /*------------------------------------------------------------
 # Main Use_conditions Section
@@ -294,21 +305,19 @@ main #Book_Properties3 {
 #Use_conditions {
     display: flex;
     flex-direction: column-reverse;
-    gap: 15px;
+    gap: var(--gap);
     margin: 50px 0 50px 110px;
 }
 #Use_conditions input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
+    padding: var(--padding-10);
+    font-size: var(--fs);
     width: 37%;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #Use_conditions label {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: var(--fw);
 }
 /*------------------------------------------------------------
 # Main Additionnal_Comments Section
@@ -316,21 +325,19 @@ main #Book_Properties3 {
 #Additionnal_Comments {
     display:  flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap);
     margin: 50px 0 50px 110px;
 }
 #Additionnal_Comments textarea {
     padding: 25px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
+    font-size: var(--fs);
     width: 37%;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: var(--border);
+    border-radius: var(--border-radius-5);
 }
 #Additionnal_Comments label {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: var(--fw);
 }
 /*------------------------------------------------------------
 # Main Buttons
@@ -341,28 +348,104 @@ main #Book_Properties3 {
 #save {
     margin: 50px 5px 50px 300px;
     padding: 15px;
-    border: 1px solid black;
+    border: var(--border);
     border-radius: 10px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
-    cursor: pointer;
+    font-size: var(--fs);
+    cursor: var(--cursor-pointer);
 }
 #submit {
     margin: 50px 0 50px 0;
     padding: 15px;
-    border: 1px solid black;
+    border: var(--border);
     border-radius: 10px;
     background-color: green;
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
-    cursor: pointer;
+    color: #fff;
+    font-size: var(--fs);
+    cursor: var(--cursor-pointer);
+}
+::placeholder {
+    color : rgba(0, 0, 0, 0.8)
 }
 /*------------------------------------------------------------
 # Footer
 -------------------------------------------------------------*/
 footer p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
     text-align: center;
+    padding: var(--padding-10);
+}
+/*------------------------------------------------------------
+# MEDIA QUERIES 
+-------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    main {
+        width: 100%;
+        margin: 20px auto;
+    }
+    #Book_Properties, #Initials, #Book_Properties2, #AllAboutEditors, #Book_Properties3 {
+        flex-direction: column;
+        gap: var(--gap);
+    }
+    #Book_title input, #Release_place input, #Firstname input, #FamilyName input, #NumberOfPages input, #NumberOfCopies input, #Editor input, #Address input, #ClassifyingNumber input, #GetterNumber input{
+        width: 50%;
+        margin-left: 50px;
+    }
+    #Book_title label, #Release_place label, #Firstname label, #FamilyName label, #NumberOfPages label, #NumberOfCopies label, #Editor label, #Address label, #ClassifyingNumber label, #GetterNumber label {
+        margin-left: 50px;
+    }
+    #Use_conditions input, #Additionnal_Comments textarea {
+        width: 80%;
+        margin-left: -60px;
+    }
+    #Use_conditions label, #Additionnal_Comments label {
+        margin-left: -60px;
+    }
+    #Book_Author h3 {
+        margin: 50px 0 20px 50px;
+    }
+    #Book_Editor h3 {
+        margin: 50px 0 20px 50px;
+    }
+    #save, #submit {
+        margin: 20px auto;
+    }
+    #save {
+        margin: 50px 5px 50px 250px;
+    }
+}
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    main {
+        width: 100%;
+        margin: 10px auto;
+    }
+    #Book_Properties, #Initials, #Book_Properties2, #AllAboutEditors, #Book_Properties3 {
+        flex-direction: column;
+        gap: var(--gap);
+    }
+    #Book_title input, #Release_place input, #Firstname input, #FamilyName input, #NumberOfPages input, #NumberOfCopies input, #Editor input, #Address input, #ClassifyingNumber input, #GetterNumber input {
+        width: 80%;
+        margin-left: 20px;
+    }
+    #Book_title label, #Release_place label, #Firstname label, #FamilyName label, #NumberOfPages label, #NumberOfCopies label, #Editor label, #Address label, #ClassifyingNumber label, #GetterNumber label {
+        margin-left: 20px;
+    }
+    #Use_conditions input, #Additionnal_Comments textarea {
+        width: 80%;
+        margin-left: -90px;
+    }
+    #Use_conditions label, #Additionnal_Comments label {
+        margin-left: -90px;
+    }
+    #Book_Author h3, #Book_Editor h3 {
+        margin: 50px 0 20px 20px;
+    }
+    #save, #submit {
+        margin: 20px auto;
+    }
+    #save {
+        margin: 50px 5px 50px 100px;
+    }
 }

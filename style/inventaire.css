@@ -1,9 +1,39 @@
 /*------------------------------------------------------------
+# RESET STYLES
+-------------------------------------------------------------*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*------------------------------------------------------------
+# CSS VARIABLES
+-------------------------------------------------------------*/
+:root {
+    --font-primary : "Roboto", sans-serif;
+    --font-secondary : "Montserrat", sans-serif;
+
+    --fs : clamp(0.8em, 1em, 1.2em);
+
+    --border : 1px solid #000;
+
+    --padding-10 : 10px;
+
+    --gap-10 : 10px;
+
+    --cursor-pointer : pointer;
+
+    --transform : scale(1.5);
+}
+/*------------------------------------------------------------
 # General
 -------------------------------------------------------------*/
-body {
+html, body {
     position: relative;
     background-color: rgb(208, 218, 223);
+    font-family: var(--font-secondary);
 }
 /*------------------------------------------------------------
 # Header
@@ -12,8 +42,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
-    margin: -8px;
+    background-color: #fff;
+    padding: var(--padding-10);
 }
 #entete {
     display: flex;
@@ -29,34 +59,32 @@ header {
      margin-left: 10px;
 }
 #menu a {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 #menu:hover {
     background-color: rgb(208, 218, 223);
     border-radius: 10px;
 }
 header h2 {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.1em;
     font-weight: normal;
-    padding: 10px;
+    padding: var(--padding-10);
     margin-right: 100px;
 }
 /*------------------------------------------------------------
 # Main
 -------------------------------------------------------------*/
 main {
-    margin: auto;
+    margin: 50px auto;
     width: 900px;
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
 }
 main h2 {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-primary);
     font-size: 1.5em;
     font-weight: normal;
     padding: 25px;
@@ -68,78 +96,69 @@ main h2 {
 main #title {
     display: flex;
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: var(--gap-10);
     margin: 50px 0px 50px 50px;
 }
 #title input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
+    padding: var(--padding-10);
+    font-size: var(--fs);
     width: 40%;
-    border: 1px solid black;
+    border: var(--border);
     border-radius: 5px;
 }
 #title label {
     font-size: 1.1em;
-    font-family: "Montserrat", sans-serif;
 }
 main #author {
     display: flex;
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: var(--gap-10);
     margin: 50px 0px 50px 50px;
 }
 #author input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
+    padding: var(--padding-10);
+    font-size: var(--fs);
     width: 40%;
-    border: 1px solid black;
+    border:  var(--border);
     border-radius: 5px;
 }
 #author label {
     font-size: 1.1em;
-    font-family: "Montserrat", sans-serif;
 }
 main #editor {
     display: flex;
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: var(--gap-10);
     margin: 50px 0px 50px 50px;
 }
 #editor input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
+    padding: var(--padding-10);
+    font-size: var(--fs);
     width: 40%;
-    border: 1px solid black;
+    border: var(--border);
     border-radius: 5px;
 }
 #editor label {
     font-size: 1.1em;
-    font-family: "Montserrat", sans-serif;
 }
 main #edition {
     display: flex;
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: var(--gap-10);
     margin: 50px 0px 0px 50px;
 }
 #edition input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
+    padding: var(--padding-10);
+    font-size: var(--fs);
     width: 40%;
-    border: 1px solid black;
+    border: var(--border);
     border-radius: 5px;
 }
 #edition label {
     font-size: 1.1em;
-    font-family: "Montserrat", sans-serif;
 }
 main h3 {
     font-size: 1.2em;
-    font-family: "Montserrat", sans-serif;
     margin-left: 50px;
     font-weight: normal;
 }
@@ -157,13 +176,12 @@ main #Cover {
     margin: 25px 0 0 60px;
 }
 #Cover input {
-    transform: scale(1.5);
+    transform: var(--transform);
     margin-right: 15px;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
 }
 #Cover label {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
 }
 /*------------------------------------------------------------
 # Main section Categorie
@@ -177,13 +195,12 @@ main #Categorie {
     margin-left: 50px;
 }
 #inner_categorie_div input {
-    transform: scale(1.5);
+    transform: var(--transform);
     margin: 15px;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
 }
 #inner_categorie_div label {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
 }
 /*------------------------------------------------------------
 # Main section Available
@@ -199,13 +216,12 @@ main #Disponible {
     margin: 25px 0 0 60px;
 }
 #Disponible input {
-    transform: scale(1.5);
+    transform: var(--transform);
     margin-right: 15px;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
 }
 #Disponible label {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
 }
 /*------------------------------------------------------------
 # Main section Unity_Price
@@ -214,11 +230,10 @@ main #Disponible {
     margin-top: 50px;
 }
 #Unity_Price input {
-    padding: 10px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
+    padding: var(--padding-10);
+    font-size: var(--fs);
     width: 40%;
-    border: 1px solid black;
+    border: var(--border);
     border-radius: 5px;
     margin-left: 50px;
 }
@@ -231,29 +246,106 @@ main #Disponible {
 }
 #save {
     padding: 15px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
-    border: 1px solid black;
+    font-size: var(--fs);
+    border: var(--border);
     border-radius: 10px;
     margin: 50px 0 50px 350px;
-    cursor: pointer; 
+    cursor: var(--cursor-pointer); 
 }
 #submit {
     padding: 15px;
     margin: 50px 10px 50px 0px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
-    color: white;
+    font-size: var(--fs);
+    color: #fff;
     background-color: green;
-    border: 1px solid black;
+    border: var(--border);
     border-radius: 10px;
-    cursor: pointer;
+    cursor: var(--cursor-pointer);
+}
+::placeholder {
+    color : rgba(0, 0, 0, 0.8)
 }
 /*------------------------------------------------------------
 # Footer
 -------------------------------------------------------------*/
 footer p {
     text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
+    padding: var(--padding-10);
+}
+/*------------------------------------------------------------
+# MEDIA QUERIES
+-------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    main {
+        width: 100%;
+        margin: 20px;
+    }
+    #title input,
+    #author input,
+    #editor input,
+    #edition input,
+    #Unity_Price input {
+        width: 80%;
+    }
+    #menu {
+        padding: var(--padding-10);
+        margin-left: 0;
+    }
+    #menu a {
+        font-size: var(--fs);
+    }
+    header h2 {
+        margin-right: 0;
+    }
+    #buttons {
+        text-align: center;
+    }
+    #save,
+    #submit {
+        margin: 20px auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    main {
+        width: 100%;
+        margin: 10px;
+    }
+    #title input,
+    #author input,
+    #editor input,
+    #edition input,
+    #Unity_Price input {
+        width: 80%;
+    }
+    main #Cover {
+        gap : 50px;
+    }
+    main #Disponible {
+        gap : 50px;
+    }
+
+    #inner_categorie_div {
+        gap : 50px;
+    }
+    #menu {
+        padding: 5px;
+        margin-left: 0;
+    }
+    #menu a {
+        font-size: 0.9em;
+    }
+    header h2 {
+        margin-right: 0;
+    }
+    #buttons {
+        text-align: center;
+    }
+    #save,
+    #submit {
+        margin: 10px auto;
+    }
 }

@@ -1,48 +1,78 @@
 /*------------------------------------------------------------
+# RESET
+-------------------------------------------------------------*/
+*, 
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*------------------------------------------------------------
+# CSS VARIABLES
+-------------------------------------------------------------*/
+:root {
+    --font-primary : "Roboto", sans-serif;
+    --font-secondary : "Montserrat", sans-serif;
+
+    --fs : clamp(1em, 1.2em, 2em);
+
+    --bg-color : rgb(59, 19, 19);
+    --bg-color-2 : rgb(39, 39, 1);
+
+    --color : #fff;
+
+    --border : 1px solid #000;
+    --border-radius : 10px;
+
+    --absolute-position : absolute;
+    --relative-position : relative;
+}
+/*------------------------------------------------------------
 # General
 -------------------------------------------------------------*/
-body {
-    position: relative;
+html, body {
+    position: var(--relative-position);
     margin:  auto;
+    font-family: var(--font-secondary);
 }
 /*------------------------------------------------------------
 # Header
 -------------------------------------------------------------*/
 header  {
-    position: relative;
+    position: var(--relative-position);
     background: url('images/pexels-pixabay-159872.jpg') no-repeat fixed;
     background-size: cover;
     height: 1000px;
 }
 header img {
-    position: absolute;
+    position: var(--absolute-position);
     top: 0;
     left: 37%;
     width: 300px;
 }
 header h1 {
-    position: absolute;
+    position: var(--absolute-position);
     top: 200px;
     left: 30%;
     font-size: 3em;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary);
     text-align: center;
-    color: white;
+    color: var(--color);
 }
 header p {
-    position: absolute;
+    position: var(--absolute-position);
     top: 300px;
     left: 33%;
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.2em;
+    color: var(--color);
+    font-size: var(--fs);
     text-align: center;
 }
 /*------------------------------------------------------------
 # Main
 -------------------------------------------------------------*/
 main {
-    position: absolute;
+    position: var(--absolute-position);
     top: 400px;
     left: 300px;
     display: grid;
@@ -50,86 +80,85 @@ main {
     grid-template-rows: 120px 120px 120px;
     gap: 20px;
     width: 700px;
-    background-color: white;
+    background-color: var(--color);
     opacity: 0.8;
     padding: 20px;
     border-radius: 15px;
 }
 main #mes_livres {
-    position: relative;
-    background-color: rgb(59, 19, 19);
+    position: var(--relative-position);
+    background-color: var(--bg-color);
     grid-column: 1 / 2;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: var(--border);
+    border-radius: var(--border-radius);
 }
 main #favoris {
-    position: relative;
-    background-color: rgb(59, 19, 19);
+    position: var(--relative-position);
+    background-color: var(--bg-color);
     grid-column: 2 / 4;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: var(--border);
+    border-radius: var(--border-radius);
 }
 main #inventaire {
-    position: relative;
-    background-color: rgb(39, 39, 1);
+    position: var(--relative-position);
+    background-color: var(--bg-color-2);
     grid-column: 1 / 4;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: var(--border);
+    border-radius: var(--border-radius);
 }
 main #ajout {
-    position: relative;
-    background-color: rgb(39, 39, 1);
+    position: var(--relative-position);
+    background-color: var(--bg-color-2);
     grid-column: 1 / 4;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: var(--border);
+    border-radius: var(--border-radius);
 }
 main a {
-    color: white;
-    font-size: 1.2em;
-    font-family: "Montserrat", sans-serif;
+    color: var(--color);
+    font-size: var(--fs);
     text-decoration: none;
 }
 main #book a {
-    position: absolute;
+    position: var(--absolute-position);
     left: 120px;
     bottom: 20px;
 }
 main #favori_book a {
-    position: absolute;
+    position: var(--absolute-position);
     left: 120px;
     bottom: 20px;
 }
 main #book_inventory a {
-    position: absolute;
+    position: var(--absolute-position);
     left: 30%;
     bottom: 20px;
 }
 main #book_input a {
-    position: absolute;
+    position: var(--absolute-position);
     left: 35%;
     bottom: 20px;
 }
 main i {
-    color: white;
+    color: var(--color);
     font-size: 2em;
 }
 main #book-icone a i {
-    position: absolute;
+    position: var(--absolute-position);
     left: 150px;
     bottom: 60px;
 }
 main #star-icone a i {
-    position: absolute;
+    position: var(--absolute-position);
     left: 150px;
     bottom: 60px;
 }
 main #clipboard-icone a i {
-    position: absolute;
+    position: var(--absolute-position);
     left: 48%;
     bottom: 60px;
 }
 main #circleplus-icone a i {
-    position: absolute;
+    position: var(--absolute-position);
     left: 48%;
     bottom: 60px;
 }
@@ -137,13 +166,176 @@ main #circleplus-icone a i {
 # Footer
 -------------------------------------------------------------*/
 footer {
-    position: absolute;
+    position: var(--absolute-position);
     bottom: 0;
     left: 35%;
 }
 footer p {
-    font-family: "Montserrat", sans-serif;
-    color: white;
-    font-size: 1.2em;
-    margin-top: 50px;
+    color: var(--color);
+    font-size: var(--fs);
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 1000px;
+    }
+    header img {
+        left: clamp(20%, 40%, 50%);
+        width: 200px;
+    }
+    header h1 {
+        top: 150px;
+        left: clamp(20%, 33%, 40%);
+        font-size: 2em;
+    }
+    header p {
+        top: 250px;
+        left: clamp(10%, 25%, 50%);
+        font-size: 1em;
+    }
+    main {
+        top: 300px;
+        left: clamp(10px, 40px, 50px);
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        height: 600px;
+    }
+    main #mes_livres,
+    main #favoris,
+    main #inventaire,
+    main #ajout {
+        grid-column: 1 / -1;
+    }
+    main #book a,
+    main #favori_book a {
+        left: min(250px, 50vw);
+        bottom: 10px;
+    }
+    main #book_inventory a,
+    main #book_input a {
+        left: 160px;
+        bottom: 10px;
+    }
+    main #book-icone a i,
+    main #star-icone a i,
+    main #clipboard-icone a i,
+    main #circleplus-icone a i {
+        left: min(300px, 50vw);
+        bottom: 50px;
+    }
+    footer {
+        left: min(20%, 50vw);
+    }
+}
+@media screen and (max-width: 480px) {
+    header {
+        height: 1000px;
+    }
+    header img {
+        left: 35%;
+        width: 150px;
+    }
+    header h1 {
+        top: 100px;
+        left: 25%;
+        font-size: 1.5em;
+    }
+    header p {
+        top: 150px;
+        left: 10%;
+        font-size: min(0.9em, 50vw);
+    }
+    main {
+        top: 200px;
+        left: 0px;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+        height: 600px;
+    }
+    main #mes_livres,
+    main #favoris,
+    main #inventaire,
+    main #ajout {
+        grid-column: 1 / -1;
+    }
+    main #book a,
+    main #favori_book a {
+        left: 150px;
+        bottom: 5px;
+    }
+    main #book_inventory a,
+    main #book_input a {
+        left: 90px;
+        bottom: 5px;
+    }
+    main #book-icone a i,
+    main #star-icone a i,
+    main #clipboard-icone a i,
+    main #circleplus-icone a i {
+        left: 180px;
+        bottom: 50px;
+    }
+    footer {
+        left: 10%;
+        font-size: 0.9em;
+    }
+}
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+    header {
+        height: 1000px;
+    }
+    header img {
+        left: 38%;
+        width: 250px;
+    }
+    header h1 {
+        top: 180px;
+        left: 32%;
+        font-size: 2.5em;
+    }
+    header p {
+        top: 280px;
+        left: 28%;
+        font-size: 1.2em;
+    }
+    main {
+        top: 350px;
+        left: 100px;
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        height: 600px;
+    }
+    main #mes_livres,
+    main #favoris,
+    main #inventaire,
+    main #ajout {
+        grid-column: 1 / -1;
+    }
+    main #book a,
+    main #favori_book a {
+        left: 350px;
+        bottom: 15px;
+    }
+    main #book_inventory a,
+    main #book_input a {
+        left: 300px;
+        bottom: 15px;
+    }
+    main #book-icone a i,
+    main #star-icone a i,
+    main #clipboard-icone a i,
+    main #circleplus-icone a i {
+        left: 380px;
+        bottom: 50px;
+    }
+    footer {
+        left: 33%;
+    }
 }

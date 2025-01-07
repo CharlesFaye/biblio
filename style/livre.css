@@ -1,9 +1,35 @@
 /*------------------------------------------------------------
+# RESET STYLES
+-------------------------------------------------------------*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*------------------------------------------------------------
+# CSS VARIABLES
+-------------------------------------------------------------*/
+:root {
+    --font-primary : "Roboto", sans-serif;
+    --font-secondary : "Montserrat", sans-serif;
+
+    --border : 1px solid rgba(0, 0, 0, 0.2);
+}
+/*------------------------------------------------------------
 # General
 -------------------------------------------------------------*/
-body {
-    position: relative;
+html, body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 100px;
     background-color: rgb(208, 218, 223);
+    font-family: var(--font-secondary);
+    padding: 10px;
+    height: 100%;
+
 }
 /*------------------------------------------------------------
 # Header
@@ -12,14 +38,17 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
-    margin: -8px;
+    background-color: #fff;
+    width: 100vw;
+    height: auto;
+    margin: -20px;
+   
 }
 #entete {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);  
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);   
+    border-top: var(--border);  
+    border-bottom: var(--border);   
 }
 #title1 {
     padding-left: 25px;
@@ -29,17 +58,15 @@ header {
      margin-left: 10px;
 }
 #menu a {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 #menu:hover {
     background-color: rgb(208, 218, 223);
     border-radius: 10px;
 }
 header h2 {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.1em;
     font-weight: normal;
     padding: 10px;
@@ -48,26 +75,27 @@ header h2 {
 /*------------------------------------------------------------
 # Main
 -------------------------------------------------------------*/
+main {
+    margin: auto;
+    width: 900px;
+    flex: 1;
+}
 main section{
     display: flex;
     justify-content: space-between;
-    margin: auto;
-    width: 1200px;
 }
 main p {
     font-size: 1em;
-    font-family: "Montserrat", sans-serif;
 }
 /*------------------------------------------------------------
 # Main legend Part
 -------------------------------------------------------------*/
 main #legend {
    order: 2;
-   margin: -100px -50px 0px 50px;
+   margin: -80px 50px 0px 50px;
    flex: 1;
 }
 main #legend h3 {
-    font-family: "Montserrat", sans-serif;
     text-decoration: underline;
     font-size: 1.1em;
 }
@@ -82,28 +110,27 @@ main #filter {
     margin: 50px 0px 50px 75px;
 }
 section table td {
-    font-family: "Montserrat", sans-serif;
     font-size: 1em;
     padding: 25px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: var(--border);
 }
 section table th {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary);
     text-transform: uppercase;
     font-size: 1.2em;
     text-align: start;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: var(--border);
     padding: 15px;
 }
 section .upper {
     text-transform: uppercase;
 }
+
 /*------------------------------------------------------------
 # Main Filter
 -------------------------------------------------------------*/
 #filter span {
     padding: 15px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.1em;
     cursor: pointer;
 }
@@ -111,7 +138,7 @@ section .upper {
     border: 2px solid black;
 }
 #filter span:hover {
-    color: white;
+    color: #fff;
     background-color: rgb(24, 24, 114);
     border: none;
 }
@@ -134,14 +161,14 @@ section .upper {
 # Footer
 -------------------------------------------------------------*/
 footer p {
-    font-family: "Montserrat", sans-serif;
     text-align: center;
+    padding: 10px;
+    margin-top: 50px;
 }
 /*------------------------------------------------------------
 # Others
 -------------------------------------------------------------*/
 .moins, .show, .fa-angle-down, .fa-angle-up {
-    font-family: "Montserrat", sans-serif;
     font-size: 1em;
     margin-top: 10px;
     text-decoration: underline;
@@ -150,4 +177,62 @@ footer p {
 }
 .hide-loading, .hide-no-read, .hide-read {
     display: none !important;
+}
+/*------------------------------------------------------------
+# Media Queries
+-------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+
+    main section {
+        flex-direction: column;
+        width: 100%;
+    }
+    main #legend {
+        margin: 20px;
+        order : 1;
+    }
+    main #table {
+        width: 100%;
+    }
+    section table th, section table td {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+    #filter {
+        margin: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    main section {
+        flex-direction: column;
+        width: 100%;
+    }
+    main {
+        flex: 1;
+    }
+    main #legend {
+        margin-bottom: 50px;
+        order: 1;
+    }
+    main #table {
+        width: 100%;
+    }
+    section table th, section table td {
+        font-size: 1em;
+        padding: 5px;
+    }
+    #filter {
+        margin: 10px auto;
+    }
+    #filter span {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+    #filter span:last-child {
+        margin-right: 100px;
+    }
+  
 }

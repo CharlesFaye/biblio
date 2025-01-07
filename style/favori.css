@@ -1,9 +1,47 @@
 /*------------------------------------------------------------
+# RESET STYLES
+-------------------------------------------------------------*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*------------------------------------------------------------
+# CSS VARIABLES
+-------------------------------------------------------------*/
+:root {
+    --font-primary : "Roboto", sans-serif;
+    --font-secondary : "Montserrat", sans-serif;
+
+    --fs : clamp(0.8em, 1em, 1.1em);
+
+    --white-color : #fff;
+    --green-color : rgba(140, 163, 12, 0.822);
+
+    --border : 1px solid rgba(0, 0, 0, 0.2);
+
+    --absolute-position : absolute;
+
+    --pointer-cursor : pointer;
+
+    --padding-10 : 10px;
+
+}
+/*------------------------------------------------------------
 # General
 -------------------------------------------------------------*/
-body {
+html, body {
     position: relative;
+    top: 0;
     background-color: rgb(208, 218, 223);
+    font-family: var(--font-secondary);
+    padding: var(--padding-10);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /*------------------------------------------------------------
 # Header
@@ -12,14 +50,15 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
-    margin: -8px;
+    background-color: var(--white-color);
+    padding: var(--padding-10);
+    margin: -20px;
 }
 #entete {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);  
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);   
+    border-top: var(--border);  
+    border-bottom: var(--border);   
 }
 #title1 {
     padding-left: 25px;
@@ -29,7 +68,6 @@ header {
      margin-left: 10px;
 }
 #menu a {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.2em;
     text-decoration: none;
     color: black;
@@ -39,10 +77,9 @@ header {
     border-radius: 10px;
 }
 header h2 {
-    font-family: "Montserrat", sans-serif;
     font-size: 1.1em;
     font-weight: normal;
-    padding: 10px;
+    padding: var(--padding-10);
     margin-right: 100px;
 }
 /*------------------------------------------------------------
@@ -61,65 +98,66 @@ section {
 }
 section input {
     padding: 10px;
-    margin-left: 45px;
+    margin : 0px 0px 50px 20px;
     border-radius: 5px;
-    width: 45%;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    border: none;
+    width: 60%;
+    font-size: var(--fs);
+}
+section input::placeholder {
+    color: rgba(0, 0, 0, 0.8);
 }
 section button {
-    padding: 10px;
+    padding: var(--padding-10);
     margin-left: 10px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
     border-radius: 20px;
     border: none;
-    color: white;
+    color: var(--white-color);
     background-color: rgb(148, 197, 69);
-    cursor: pointer;
+    cursor: var(--pointer-cursor);
 }
 section li {
     position: relative;
     list-style: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
     padding: 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: var(--border);
 }
 /*------------------------------------------------------------
 # Icons
 -------------------------------------------------------------*/
 .fa-trash-can {
-    position: absolute;
+    position: var(--absolute-position);
     right: 90px;
     color: red;
     font-size: 1.3em;
-    cursor: pointer;
+    cursor: var(--pointer-cursor);
 }
 .first-star {
-    position: absolute;
-    left: 500px;
-    color: rgba(140, 163, 12, 0.822);
+    position: var(--absolute-position);
+    right: 250px;
+    color: var(--green-color);
 }
 .second-star {
-    position: absolute;
-    left: 520px;
-    color: rgba(140, 163, 12, 0.822);
+    position: var(--absolute-position);
+    right: 230px;
+    color: var(--green-color);
 }
 .third-star {
-    position: absolute;
-    left: 540px;
-    color: rgba(140, 163, 12, 0.822);
+    position: var(--absolute-position);
+    right: 210px;
+    color: var(--green-color);
 }
 .fourth-star {
-    position: absolute;
-    left: 560px;
-    color: rgba(140, 163, 12, 0.822);
+    position: var(--absolute-position);
+    right: 190px;
+    color: var(--green-color);
 }
 .fifth-star {
-    position: absolute;
-    left: 580px;
-    color: rgba(140, 163, 12, 0.822);
+    position: var(--absolute-position);
+    right: 170px;
+    color: var(--green-color);
 }
 /*------------------------------------------------------------
 # Aside 
@@ -127,10 +165,10 @@ section li {
 aside {
     margin-top: 50px;
     flex: 1.5;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: var(--border);
     border-radius: 10px;
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
-    background-color: white;
+    background-color: var(--white-color);
     color: rgb(20, 20, 51);
     height: 500px;
     overflow-x: none;
@@ -138,24 +176,122 @@ aside {
 }
 aside h2 {
     text-align: center;
-    font-family: "Montserrat", sans-serif;
     font-size: 1.3em;
     text-decoration: underline;
 }
 aside li {
     padding: 15px;
     list-style: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
+    font-size: var(--text-fs);
     text-align: center;
     text-decoration: underline;
-    cursor: pointer;
 }
 /*------------------------------------------------------------
 # Footer
 -------------------------------------------------------------*/
 footer p {
     text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: var(--fs);
+    padding : var(--padding-10);
+    margin-top: 50px;
+}
+/*------------------------------------------------------------
+# MEDIA QUERIES
+-------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    #menu {
+        margin-left: 0;
+        padding: var(--padding-10);
+    }
+    main {
+        flex-direction: column;
+        width: 100%;
+    }
+    section {
+        margin: 50px 20px;
+        order: 2;
+    }
+    aside {
+      display: none;
+    }
+    .first-star,
+    .second-star,
+    .third-star,
+    .fourth-star,
+    .fifth-star {
+        display: none;
+    }
+   
+}
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    header h1 {
+        font-size: clamp(1.3em, 1.5em, 2em);
+    }
+
+    header h2 {
+        font-size: var(--fs);
+        margin-right: 50px;
+    }
+    #menu a {
+        font-size: var(--fs);
+    }
+    section {
+        margin: 20px 10px;
+    }
+    section input {
+        width: 70%;
+        font-size: 0.9em;
+    }
+    section button {
+        font-size: 0.9em;
+    }
+    .fa-trash-can {
+        right: 50px;
+        font-size: var(--fs);
+    }
+    .first-star,
+    .second-star,
+    .third-star,
+    .fourth-star,
+    .fifth-star {
+        opacity: 0;
+    }
+    footer p {
+        font-size: 0.9em;
+    }
+}
+@media screen and (min-width: 480px) and (max-width : 768px) {
+    .first-star,
+    .second-star,
+    .third-star,
+    .fourth-star,
+    .fifth-star {
+        opacity: 0;
+    }
+}
+@media screen and (min-width: 768px) and (max-width : 1024px) {
+    #menu {
+        margin-left: 20px;
+        padding: 20px;
+    }
+    main {
+        width: 100%;
+    }
+    aside {
+        display: none;
+    }
+    .first-star,
+    .second-star,
+    .third-star,
+    .fourth-star,
+    .fifth-star {
+        display: none;
+    }
+    
 }

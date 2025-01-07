@@ -3,7 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0", name="viewport">
-
+        <meta name="description" content="Explorez votre collection de livres, ajoutez-en de nouveaux et suivez vos lectures.">
+        <!-- meta og properties -->
+        <meta property="og:description" content="Explorez votre collection de livres, ajoutez-en de nouveaux et suivez vos lectures">
+        <meta propert="og:title" content="Bibliothèque personnelle">
+        <meta property="og:url" content="#">
+        <meta property="og:image" content="#">
+        <!-- meta twitter card tags -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="#">
+        <meta name="twitter:title" content="Bibliothèque personnelle">
+        <meta name="twitter:description" content="Explorez votre collection de livres, ajoutez-en de nouveaux et suivez vos lectures">
+        <meta name="twitter:image" content="#">
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +29,6 @@
         <!-- fontawesome icones kit -->
         <script src="https://kit.fontawesome.com/a3a05e0c21.js" crossorigin="anonymous"></script>
 
-        <!-- JS file -->
-        <script src="script.js" defer></script>
     </head>
     <body>
         <!-- ======= Header ======= -->
@@ -44,10 +53,10 @@
         <main>
             <!-- ======= Filter section ======= -->
             <div id="filter">
-                <span class="active" data-filter="all">Tous</span>
-                <span data-filter="read">Déjà Lu</span>
-                <span data-filter="load">En cours</span>
-                <span data-filter="unread">Non Lu</span>
+                <span class="active" data-filter="*">Tous</span>
+                <span data-filter=".read">Déjà Lu</span>
+                <span data-filter=".load">En cours</span>
+                <span data-filter=".unread">Non Lu</span>
             </div><!-- ======= End filter section======= -->
             <!-- ======= Section ======= -->
             <section>
@@ -72,22 +81,22 @@
                 </thead><!-- ======= End Thead ======= -->
 
                 <!-- ======= Tbody ======= -->
-                <tbody>
-                    <tr class="loading">
+                <tbody class="grid">
+                    <tr class="load grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>Comment se faire des amis</td>
                         <td>Dale Carnegie</td>
                         <td>1936</td>
                         <td><i class="fa-solid fa-spinner"></i></i></td>
                     </tr>
 
-                    <tr class="loading">
+                    <tr class="load grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>Père riche, père pauvre</td>
                         <td>Robert Kiyosaki</td>
                         <td>1997</td>
                         <td><i class="fa-solid fa-spinner"></i></i></td>
                     </tr>
 
-                    <tr class="already_read">
+                    <tr class="read grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>Une si longue lettre</td>
                         <td>Mariama Bâ</td>
                         <td>1979</td>
@@ -95,61 +104,61 @@
                         
                     </tr>
 
-                    <tr class="still_no_read">
+                    <tr class="unread grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>Les onze lois de la réussite</td>
                         <td>Anthony Robbins</td>
                         <td>2011</td>
                         <td><i class="fa-solid fa-xmark"></i></td>   
                     </tr>
 
-                    <tr class="already_read">
+                    <tr class="read grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>Les Contes d'Amadou Koumba</td>
                         <td>Birago Diop</td>
                         <td>1947</td>
                         <td><i class="fa-solid fa-check-double"></i></td>
                     </tr>
 
-                    <tr class="still_no_read">
+                    <tr class="unread grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>Les nouveaux Contes d'Amadou Koumba</td>
                         <td>Birago Diop</td>
                         <td>1958</td>
                         <td><i class="fa-solid fa-xmark"></i></td>
                     </tr>
 
-                    <tr class="already_read">
+                    <tr class="read grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>Sous l'orage</td>
                         <td>Seydou Badian</td>
                         <td>1957</td>
                         <td><i class="fa-solid fa-check-double"></i></td>
                     </tr>
 
-                    <tr class="still_no_read">
+                    <tr class="unread grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>Leurres et Lueurs</td>
                         <td>Birago Diop</td>
                         <td>1967</td>
                         <td><i class="fa-solid fa-xmark"></i></td>
                     </tr>
 
-                    <tr class="reveal show_item still_no_read">
+                    <tr class="unread grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>Contes et Lavanes</td>
                         <td>Birago Diop</td>
                         <td>1963</td>
                         <td><i class="fa-solid fa-xmark"></i></td>
                     </tr>
 
-                    <tr class="reveal show_item still_no_read">
+                    <tr class="unread grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>La Plus Secrète Mémoire des hommes</td>
                         <td>Mohamed Mbougar Sarr</td>
                         <td>2021</td>
                         <td><i class="fa-solid fa-xmark"></i></td>
                     </tr>
-                    <tr class="reveal show_item still_no_read">
+                    <tr class=" unread grid-item">
                         <td class="upper"><i class="fa-solid fa-tags">nations nègres et culture</i></td>
                         <td>Cheikh Anta Diop</td>
                         <td>1955</td>
                         <td><i class="fa-solid fa-xmark"></i></td>
                     </tr>
-                    <tr class="reveal show_item still_no_read">
+                    <tr class=" unread grid-item">
                         <td class="upper"><i class="fa-solid fa-tags"></i>Amkoullel l'enfant peul</td>
                         <td>Amadou Hampâté Bâ</td>
                         <td>1991</td>
@@ -160,17 +169,21 @@
                 </tbody><!-- ======= End Tbody ======= -->
             </table><!-- ======= End Table ======= -->
 
-            <span class="show">Afficher plus<i class="fa-solid fa-angle-down"></i></span>
-            <span class="moins">Afficher moins<i class="fa-solid fa-angle-up"></i></span>
-
+           
             </div>
             </section><!-- ======= End Section ======= -->
         </main><!-- ======= End Main ======= -->
 
         <!-- ======= Footer ======= -->
         <footer>
-            <p>Développé par @Charles S. Faye - Mai 2024</p>
+            <p>&copy; Copyright <span class="current-year"></span> Charles Simel Faye</p>
         </footer><!-- ======= End Footer ======= -->
-
+    
+        <!-- JS files -->
+         <script src="date.js"></script>
+         <!-- Isotope library files -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
